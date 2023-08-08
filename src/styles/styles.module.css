@@ -30,7 +30,6 @@
 
 .menusection {
   display: flex;
-  justify-content: row;
   gap: 18px;
   font-size: 1.1rem;
 }
@@ -39,4 +38,3 @@
   text-decoration: none;
   color: #1480f5;
 }
-
