@@ -1,0 +1,46 @@
+.cards{
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  width: 80%;
+  margin: 1.5rem auto;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 1px solid #047af862;
+  font-family: 'Montserrat', serif;
+  align-items: center;
+}
+
+.contentSection {
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+h2 {
+  line-height: 0;
+}
+
+.reservedTag {
+  background-color: #2c9aaa;
+  color: white;
+  padding: 1px 5px;
+  padding-bottom: 2px;
+  border-radius: 5px;
+  margin-right: 3px;
+  font-size: 0.6rem;
+}
+
+.description {
+  font-size: 0.9rem;
+}
+
+button {
+  background-color: #0478f8;
+  border: none;
+  padding: 0.5rem;
+  color: #fff;
+  border-radius: 0.3rem;
+}
