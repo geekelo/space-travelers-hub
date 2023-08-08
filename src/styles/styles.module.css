@@ -1,0 +1,37 @@
+.container_fluid {
+  width: 100%;
+}
+
+.header {
+  background: #f8f8f8;
+}
+
+.container {
+  width: 80%;
+  height: 80px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand img {
+  width: 54px;
+}
+
+.menusection {
+  display: flex;
+  justify-content: row;
+  gap: 18px;
+  font-size: 1.2rem;
+}
+
+.menuitems {
+  text-decoration: none;
+  color: #1480f5;
+}
+
+.menuitems.active {
+  color: red;
+  background-color: #1480f5;
+}
