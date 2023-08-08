@@ -4,6 +4,7 @@
 
 .header {
   background: #f8f8f8;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .container {
@@ -15,6 +16,14 @@
   justify-content: space-between;
 }
 
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
 .brand img {
   width: 54px;
 }
@@ -23,7 +32,7 @@
   display: flex;
   justify-content: row;
   gap: 18px;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 .menuitems {
@@ -31,7 +40,3 @@
   color: #1480f5;
 }
 
-.menuitems.active {
-  color: red;
-  background-color: #1480f5;
-}
