@@ -1,0 +1,40 @@
+.container_fluid {
+  width: 100%;
+}
+
+.header {
+  background: #f8f8f8;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+  width: 80%;
+  height: 80px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.brand img {
+  width: 54px;
+}
+
+.menusection {
+  display: flex;
+  gap: 18px;
+  font-size: 1.1rem;
+}
+
+.menuitems {
+  text-decoration: none;
+  color: #1480f5;
+}
