@@ -38,3 +38,8 @@
   text-decoration: none;
   color: #1480f5;
 }
+
+.myprofile {
+  border-left: 2px solid #b6b7b8;
+  padding-left: 1rem;
+}
