@@ -13,6 +13,7 @@ const Header = () => (
       <div className={`${styles.menusection}`}>
         <p><NavLink to="/" className={`${styles.menuitems} menuitems`}>Rocket</NavLink></p>
         <p><NavLink to="/missions" className={`${styles.menuitems} menuitems`}>Missions</NavLink></p>
+        <p><NavLink to="/myprofile" className={`${styles.menuitems} ${styles.myprofile} menuitems`}>My Profile</NavLink></p>
       </div>
     </nav>
   </div>
