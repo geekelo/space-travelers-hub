@@ -1,7 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import Rocketitem from './rocketitem';
-import { fetchRockets } from '../../redux/rocket/rocketsSlice';
+import { fetchRockets } from '../redux/rocket/rocketsSlice';
 
 function Rocket() {
   const rockets = useSelector((state) => state.rocket.value);
@@ -18,6 +18,7 @@ function Rocket() {
           rockets.map((each) => (
             <Rocketitem
               key={each.id}
+              id={each.id}
               title={each.name}
               summary={each.description}
               image1={each.flickr_images[0]}

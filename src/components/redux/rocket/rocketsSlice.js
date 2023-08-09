@@ -20,7 +20,7 @@ const rocketReducer = createSlice({
   initialState,
   reducers: {
     reserveRockets: (state, action) => {
-      const newRocketArr = state.value.map((each) => {
+      const newRocketArr1 = state.value.map((each) => {
         if (each.id === action.payload) {
           return {
             ...each,
@@ -31,7 +31,22 @@ const rocketReducer = createSlice({
       });
       return {
         ...state,
-        value: newRocketArr,
+        value: newRocketArr1,
+      };
+    },
+    cancelResevations: (state, action) => {
+      const newRocketArr2 = state.value.map((each) => {
+        if (each.id === action.payload) {
+          return {
+            ...each,
+            active: false,
+          };
+        }
+        return each;
+      });
+      return {
+        ...state,
+        value: newRocketArr2,
       };
     },
   },
@@ -54,5 +69,5 @@ const rocketReducer = createSlice({
   },
 });
 
-export const { reserveRockets } = rocketReducer.actions;
+export const { reserveRockets, cancelResevations } = rocketReducer.actions;
 export default rocketReducer.reducer;
