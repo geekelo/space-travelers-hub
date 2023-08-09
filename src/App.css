@@ -1,1 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800&family=Roboto+Slab:wght@200;300;400;500&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: rgb(55, 53, 77);
+}
