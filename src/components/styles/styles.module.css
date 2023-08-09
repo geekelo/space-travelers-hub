@@ -31,12 +31,13 @@
 .menusection {
   display: flex;
   gap: 18px;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .menuitems {
   text-decoration: none;
   color: #1480f5;
+  font-weight: 600;
 }
 
 .myprofile {
