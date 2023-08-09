@@ -1,4 +1,6 @@
 import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { reserveRockets } from './src/redux/rocket/rocketsSlice';
 import '../styles/rocketcards.css';
 
 function Rocketitem({
@@ -8,7 +10,13 @@ function Rocketitem({
   title,
   active,
 }) {
+  const dispatch = useDispatch();
   const activeStatus = active;
+
+  const reserveRocket = (e, key) => {
+    e.preventDefault();
+    dispatch(reserveRockets(key));
+  };
 
   return (
     <li className="cards">
@@ -17,9 +25,6 @@ function Rocketitem({
       </div>
       <div className="contentSection">
         <h2>{title}</h2>
-        <i>
-          {key}
-        </i>
         <p className="description">
           {activeStatus === true ? (
             <span className="reservedTag">Reserved</span>
@@ -29,7 +34,7 @@ function Rocketitem({
         <p>
           { activeStatus === true
             ? (<button className="cancelbtn" type="submit">Cancel Resevation</button>)
-            : (<button type="submit">Reserve Rocket</button>)}
+            : (<button type="submit" onClick={(e) => reserveRocket(e, key)}>Reserve Rocket</button>)}
         </p>
       </div>
     </li>
