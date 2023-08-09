@@ -24,7 +24,7 @@ const Header = () => (
         <p>
           <NavLink
             to="/myprofile"
-            className={`${styles.menuitems} ${styles.myprofile} menuitems`}
+            className={`${styles.menuitems} ${styles.myprofileText} menuitems`}
           >
             My Profile
           </NavLink>
