@@ -26,7 +26,11 @@ function Rocketitem({
           ) : null}
           {summary}
         </p>
-        <p><button type="submit">Reserve Rocket</button></p>
+        <p>
+          { activeStatus === true
+            ? (<button className="cancelbtn" type="submit">Cancel Resevation</button>)
+            : (<button type="submit">Reserve Rocket</button>)}
+        </p>
       </div>
     </li>
   );
