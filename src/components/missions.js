@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import Table from 'react-bootstrap/Table';
 import MissionItems from './missionsItem';
-import { fetchMissions } from '../redux/mission/missionsSlice';
+import { fetchMissions } from './redux/mission/missionsSlice';
 import styles from './styles/styles.module.css';
 import mStyles from './styles/missionpage.module.css';
 

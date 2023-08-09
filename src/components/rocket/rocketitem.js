@@ -1,14 +1,27 @@
 import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { reserveRockets, cancelResevations } from '../redux/rocket/rocketsSlice';
 import '../styles/rocketcards.css';
 
 function Rocketitem({
-  key,
+  id,
   image1,
   summary,
   title,
   active,
 }) {
+  const dispatch = useDispatch();
   const activeStatus = active;
+
+  const reserveRocket = (e, currId) => {
+    e.preventDefault();
+    dispatch(reserveRockets(currId));
+  };
+
+  const cancelRocket = (e, currId) => {
+    e.preventDefault();
+    dispatch(cancelResevations(currId));
+  };
 
   return (
     <li className="cards">
@@ -17,9 +30,6 @@ function Rocketitem({
       </div>
       <div className="contentSection">
         <h2>{title}</h2>
-        <i>
-          {key}
-        </i>
         <p className="description">
           {activeStatus === true ? (
             <span className="reservedTag">Reserved</span>
@@ -28,8 +38,8 @@ function Rocketitem({
         </p>
         <p>
           { activeStatus === true
-            ? (<button className="cancelbtn" type="submit">Cancel Resevation</button>)
-            : (<button type="submit">Reserve Rocket</button>)}
+            ? (<button className="cancelbtn" type="submit" onClick={(e) => cancelRocket(e, id)}>Cancel Resevation</button>)
+            : (<button type="submit" onClick={(e) => reserveRocket(e, id)}>Reserve Rocket</button>)}
         </p>
       </div>
     </li>
@@ -38,7 +48,7 @@ function Rocketitem({
 
 Rocketitem.propTypes = {
   title: PropTypes.string.isRequired,
-  key: PropTypes.number.isRequired,
+  id: PropTypes.number.isRequired,
   summary: PropTypes.string.isRequired,
   image1: PropTypes.string.isRequired,
   active: PropTypes.bool.isRequired,
