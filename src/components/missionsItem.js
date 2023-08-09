@@ -3,16 +3,18 @@ import styles from './styles/missionpage.module.css';
 
 function MissionItems({ missionId, mission, description }) {
   return (
-    <div className={styles.missionList}>
-      <div className={styles.missionName}>{mission}</div>
-      <div className={styles.missionDesc}>{description}</div>
-      <div className={styles.missionCta}>
+    <tr className={styles.missionList}>
+      <td>{mission}</td>
+      <td>{description}</td>
+      <td>
         <button id={missionId} type="button">
           Not a member
         </button>
+      </td>
+      <td>
         <button type="button">Join member</button>
-      </div>
-    </div>
+      </td>
+    </tr>
   );
 }
 

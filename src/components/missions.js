@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
+import Table from 'react-bootstrap/Table';
 import MissionItems from './missionsItem';
 import { fetchMissions } from '../redux/mission/missionsSlice';
 import styles from './styles/styles.module.css';
@@ -15,21 +16,26 @@ function Missions() {
 
   return (
     <div className={styles.container}>
-      <div className={mStyles.table}>
-        <div className={mStyles.thead}>
-          <div className={mStyles.theadName}>Mission</div>
-          <div className={mStyles.theadDesc}>Description</div>
-          <div className={mStyles.theadStat}>Status</div>
-        </div>
-        {missions.map((mission) => (
-          <MissionItems
-            key={mission.mission_id}
-            missionId={mission.mission_id}
-            mission={mission.mission_name}
-            description={mission.description}
-          />
-        ))}
-      </div>
+      <Table striped bordered hover className={mStyles.table}>
+        <thead className={mStyles.thead}>
+          <tr>
+            <td>Mission</td>
+            <td>Description</td>
+            <td>Status</td>
+            <td> </td>
+          </tr>
+        </thead>
+        <tbody>
+          {missions.map((mission) => (
+            <MissionItems
+              key={mission.mission_id}
+              missionId={mission.mission_id}
+              mission={mission.mission_name}
+              description={mission.description}
+            />
+          ))}
+        </tbody>
+      </Table>
     </div>
   );
 }

@@ -1,60 +1,23 @@
 .table {
-  background: #ccc;
-  border-radius: 5px;
-  margin: 20px auto;
+    background: #ccc;
+    border-radius: 5px;
+    margin: 20px auto;
 }
 
 .thead {
-  height: 50px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #d7d6d6;
-  background: #fff;
-  font-weight: 600;
-}
-
-.theadName {
-  width: 10%;
-  padding: 0 10px;
-}
-
-.theadDesc {
-  width: 70%;
-  padding: 0 10px;
-}
-
-.theadStat {
-  width: 20%;
-}
-
-.missionList {
-  display: flex;
-  justify-content: space-between;
+    height: 50px;
+    background: #fff;
+    font-weight: 600;
 }
 
 .missionList:nth-child(odd) {
-  background: #eee;
+    background: #eee;
 }
 
-.missionName {
-  width: 10%;
-  font-weight: 600;
-  border-right: 1px solid #d7d6d6;
-  padding: 10px;
+.missionList:nth-child(even) {
+    background: #fff;
 }
 
-.missionDesc {
-  width: 70%;
-  padding: 10px;
-  border-right: 1px solid #d7d6d6;
-}
-
-.missionCta {
-  width: 20%;
-  padding: 0 10px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  gap: 20px;
+td {
+    padding: 10px;
 }
