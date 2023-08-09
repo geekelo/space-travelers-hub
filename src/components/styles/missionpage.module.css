@@ -1,23 +1,23 @@
 .table {
-    background: #ccc;
-    border-radius: 5px;
-    margin: 20px auto;
+  background: #ccc;
+  border-radius: 5px;
+  margin: 20px auto;
 }
 
 .thead {
-    height: 50px;
-    background: #fff;
-    font-weight: 600;
+  height: 50px;
+  background: #fff;
+  font-weight: 600;
 }
 
 .missionList:nth-child(odd) {
-    background: #eee;
+  background: #eee;
 }
 
 .missionList:nth-child(even) {
-    background: #fff;
+  background: #fff;
 }
 
 td {
-    padding: 10px;
+  padding: 10px;
 }
