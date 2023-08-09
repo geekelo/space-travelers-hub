@@ -3,13 +3,13 @@
 }
 
 .header {
+  height: 80px;
   background: #f8f8f8;
   font-family: 'Montserrat', sans-serif;
 }
 
 .container {
   width: 80%;
-  height: 80px;
   margin: 0 auto;
   display: flex;
   align-items: center;
