@@ -2,7 +2,7 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 const initialState = {
-  rockets: [],
+  value: [],
   status: 'idle',
   error: false,
 };
@@ -63,7 +63,7 @@ const rocketReducer = createSlice({
       .addCase(fetchRockets.fulfilled, (state, action) => ({
         ...state,
         status: 'done',
-        rockets: action.payload,
+        value: action.payload,
       }))
       .addCase(fetchRockets.rejected, (state, action) => ({
         ...state,
