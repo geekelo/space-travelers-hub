@@ -23,44 +23,44 @@ td {
 }
 
 .mission_name {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 .membership_stat {
-    width: 120px;
-    text-align: center;
+  width: 120px;
+  text-align: center;
 }
 
 .reservation_stat {
-    width: 120px;
-    text-align: center;
+  width: 120px;
+  text-align: center;
 }
 
 .active_member {
-    background: #2c9aaa;
-    text-transform: capitalize;
-    color: #fff;
-    font-weight: 600;
+  background: #2c9aaa;
+  text-transform: capitalize;
+  color: #fff;
+  font-weight: 600;
 }
 
 .not_member {
-    background: #666;
-    text-transform: uppercase;
-    color: #fff;
-    font-weight: 600;
-    padding: 5px;
+  background: #666;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 600;
+  padding: 5px;
 }
 
 .leave_mission {
-    background: transparent;
-    border:  1px solid #ff4000;
-    color: #ff4000;
-    text-transform:capitalize;
+  background: transparent;
+  border: 1px solid #ff4000;
+  color: #ff4000;
+  text-transform: capitalize;
 }
 
 .join_mission {
-    background: transparent;
-    border:  1px solid #666;
-    color: #666;
-    text-transform:capitalize;
+  background: transparent;
+  border: 1px solid #666;
+  color: #666;
+  text-transform: capitalize;
 }
