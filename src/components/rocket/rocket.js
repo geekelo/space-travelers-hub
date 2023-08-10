@@ -4,17 +4,19 @@ import { fetchRockets } from '../redux/rocket/rocketsSlice';
 import Rocketitem from './rocketitem';
 
 function Rocket() {
-  const rockets = useSelector((state) => state.rocket.value);
+  const rocketsData = useSelector((state) => state.rockets);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchRockets());
-  }, [dispatch]);
+    if (rocketsData.rockets.length === 0) {
+      dispatch(fetchRockets());
+    }
+  }, [dispatch, rocketsData.rockets.length]);
 
   return (
     <div>
       <ul>
-        {rockets.map((each) => (
+        {rocketsData.rockets.map((each) => (
           <Rocketitem
             key={each.id}
             id={each.id}

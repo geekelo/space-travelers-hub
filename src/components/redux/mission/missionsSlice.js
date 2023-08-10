@@ -2,8 +2,9 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 const initialState = {
-  value: [],
+  missions: [],
   status: 'idle',
+  error: false,
 };
 
 export const fetchMissions = createAsyncThunk(
@@ -26,7 +27,7 @@ const missionReducer = createSlice({
   reducers: {
     ReserveMissions: (state, { payload }) => ({
       ...state,
-      value: state.value.map((mission) => {
+      missions: state.missions.map((mission) => {
         if (mission.mission_id === payload) {
           return {
             ...mission,
@@ -38,7 +39,7 @@ const missionReducer = createSlice({
     }),
     RemoveReserveMissions: (state, { payload }) => ({
       ...state,
-      value: state.value.map((mission) => {
+      missions: state.missions.map((mission) => {
         if (mission.mission_id === payload) {
           return {
             ...mission,
@@ -58,7 +59,8 @@ const missionReducer = createSlice({
       .addCase(fetchMissions.fulfilled, (state, action) => ({
         ...state,
         status: 'done',
-        value: action.payload,
+        missions: action.payload,
+        reserved: false,
       }))
       .addCase(fetchMissions.rejected, (state, action) => ({
         ...state,
