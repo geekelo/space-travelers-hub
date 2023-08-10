@@ -1,5 +1,6 @@
 .container_fluid {
   width: 100%;
+  padding-top: 0.8rem;
 }
 
 .header {
@@ -40,7 +41,7 @@
   font-weight: 600;
 }
 
-.myprofile {
+.myprofileText {
   border-left: 2px solid #b6b7b8;
   padding-left: 1rem;
 }
