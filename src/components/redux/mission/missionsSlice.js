@@ -24,36 +24,30 @@ const missionReducer = createSlice({
   name: 'missions',
   initialState,
   reducers: {
-    ReserveMissions: (state, { payload }) => {
-      const newState = state.value.map((mission) => {
+    ReserveMissions: (state, { payload }) => ({
+      ...state,
+      value: state.value.map((mission) => {
         if (mission.mission_id === payload) {
           return {
             ...mission,
             reserved: true,
           };
         }
-        return mission;
-      });
-      return {
-        ...state,
-        value: newState,
-      };
-    },
-    RemoveReserveMissions: (state, { payload }) => {
-      const newState = state.value.map((mission) => {
+        return { ...mission };
+      }),
+    }),
+    RemoveReserveMissions: (state, { payload }) => ({
+      ...state,
+      value: state.value.map((mission) => {
         if (mission.mission_id === payload) {
           return {
             ...mission,
             reserved: false,
           };
         }
-        return mission;
-      });
-      return {
-        ...state,
-        value: newState,
-      };
-    },
+        return { ...mission };
+      }),
+    }),
   },
   extraReducers: (builder) => {
     builder
