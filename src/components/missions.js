@@ -7,12 +7,14 @@ import styles from './styles/styles.module.css';
 import mStyles from './styles/missionpage.module.css';
 
 function Missions() {
-  const missions = useSelector((state) => state.mission.value);
+  const missionsData = useSelector((state) => state.missions);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchMissions());
-  }, [dispatch]);
+    if (missionsData.missions.length === 0) {
+      dispatch(fetchMissions());
+    }
+  }, [dispatch, missionsData.missions.length]);
 
   return (
     <div className={styles.container}>
@@ -26,7 +28,7 @@ function Missions() {
           </tr>
         </thead>
         <tbody>
-          {missions.map((mission) => (
+          {missionsData.missions.map((mission) => (
             <MissionItems
               key={mission.mission_id}
               missionId={mission.mission_id}

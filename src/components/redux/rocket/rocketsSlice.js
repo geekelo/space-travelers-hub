@@ -2,53 +2,51 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 const initialState = {
-  value: [],
+  rockets: [],
   status: 'idle',
+  error: false,
 };
 
-export const fetchRockets = createAsyncThunk('rockets/fetchrockets', async () => {
-  try {
-    const response = await axios.get('https://api.spacexdata.com/v4/rockets');
-    return response.data;
-  } catch (error) {
-    throw new Error('Something went wrong with fetching data');
-  }
-});
+export const fetchRockets = createAsyncThunk(
+  'rockets/fetchrockets',
+  async () => {
+    try {
+      const response = await axios.get('https://api.spacexdata.com/v4/rockets');
+      return response.data;
+    } catch (error) {
+      throw new Error('Something went wrong with fetching data');
+    }
+  },
+);
 
 const rocketReducer = createSlice({
-  name: 'rocketpage',
+  name: 'rockets',
   initialState,
   reducers: {
-    reserveRockets: (state, action) => {
-      const newRocketArr1 = state.value.map((each) => {
-        if (each.id === action.payload) {
+    reserveRockets: (state, { payload }) => ({
+      ...state,
+      rockets: state.rockets.map((each) => {
+        if (each.id === payload) {
           return {
             ...each,
             active: true,
           };
         }
-        return each;
-      });
-      return {
-        ...state,
-        value: newRocketArr1,
-      };
-    },
-    cancelResevations: (state, action) => {
-      const newRocketArr2 = state.value.map((each) => {
-        if (each.id === action.payload) {
+        return { ...each };
+      }),
+    }),
+    cancelResevations: (state, { payload }) => ({
+      ...state,
+      rockets: state.rockets.map((each) => {
+        if (each.id === payload) {
           return {
             ...each,
             active: false,
           };
         }
-        return each;
-      });
-      return {
-        ...state,
-        value: newRocketArr2,
-      };
-    },
+        return { ...each };
+      }),
+    }),
   },
   extraReducers: (builder) => {
     builder
@@ -59,7 +57,7 @@ const rocketReducer = createSlice({
       .addCase(fetchRockets.fulfilled, (state, action) => ({
         ...state,
         status: 'done',
-        value: action.payload,
+        rockets: action.payload,
       }))
       .addCase(fetchRockets.rejected, (state, action) => ({
         ...state,
