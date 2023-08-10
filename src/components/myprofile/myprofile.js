@@ -40,7 +40,7 @@ function Myprofile() {
       </div>
       <div className="listSections">
         <div className="titles">
-          <h2>My Rockets</h2>
+          <h2 className="titleText">My Rockets</h2>
         </div>
         <ul className="itemsSection">
           {activeArr.length === 0 ? (
