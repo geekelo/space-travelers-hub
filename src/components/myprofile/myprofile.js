@@ -7,14 +7,14 @@ import '../styles/myprofile.css';
 import MissionProfile from './missionList';
 
 function Myprofile() {
-  const rocketsData = useSelector((state) => state.rockets);
+  const rocketsData = useSelector((state) => state.rocket.value);
   const missionData = useSelector((state) => state.missions);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchRockets, fetchMissions);
   }, [dispatch]);
 
-  const activeArr = rocketsData.rockets.filter((each) => each.active === true);
+  const activeArr = rocketsData.filter((each) => each.active === true);
   const reservedMissions = missionData.missions.filter(
     (mission) => mission.reserved === true,
   );
