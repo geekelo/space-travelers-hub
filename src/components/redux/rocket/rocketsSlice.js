@@ -2,7 +2,7 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 const initialState = {
-  rockets: [],
+  value: [],
   status: 'idle',
   error: false,
 };
@@ -23,30 +23,36 @@ const rocketReducer = createSlice({
   name: 'rockets',
   initialState,
   reducers: {
-    reserveRockets: (state, { payload }) => ({
-      ...state,
-      rockets: state.rockets.map((each) => {
-        if (each.id === payload) {
+    reserveRockets: (state, action) => {
+      const newValue1 = state.value.map((each) => {
+        if (each.id === action.payload) {
           return {
             ...each,
             active: true,
           };
         }
-        return { ...each };
-      }),
-    }),
-    cancelResevations: (state, { payload }) => ({
-      ...state,
-      rockets: state.rockets.map((each) => {
-        if (each.id === payload) {
+        return each;
+      });
+      return {
+        ...state,
+        value: newValue1,
+      };
+    },
+    cancelResevations: (state, action) => {
+      const newValue2 = state.value.map((each) => {
+        if (each.id === action.payload) {
           return {
             ...each,
             active: false,
           };
         }
-        return { ...each };
-      }),
-    }),
+        return each;
+      });
+      return {
+        ...state,
+        value: newValue2,
+      };
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -57,7 +63,7 @@ const rocketReducer = createSlice({
       .addCase(fetchRockets.fulfilled, (state, action) => ({
         ...state,
         status: 'done',
-        rockets: action.payload,
+        value: action.payload,
       }))
       .addCase(fetchRockets.rejected, (state, action) => ({
         ...state,
