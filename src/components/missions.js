@@ -32,6 +32,7 @@ function Missions() {
               missionId={mission.mission_id}
               mission={mission.mission_name}
               description={mission.description}
+              reserved={mission.reserved}
             />
           ))}
         </tbody>
