@@ -1,15 +1,17 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-import { fetchRockets } from '../redux/rocket/rocketsSlice';
 import Rocketitem from './rocketitem';
+import { fetchRockets } from '../redux/rocket/rocketsSlice';
 
 function Rocket() {
-  const rockets = useSelector((state) => state.existingRockets);
+  const rockets = useSelector((state) => state.rocket.value);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchRockets());
-  }, [dispatch]);
+    if (rockets.length === 0) {
+      dispatch(fetchRockets());
+    }
+  }, [dispatch, rockets.length]);
 
   return (
     <div>
