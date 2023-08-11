@@ -61,7 +61,7 @@ function MissionItems({
 }
 
 MissionItems.propTypes = {
-  missionId: PropTypes.string.isRequired,
+  missionId: PropTypes.number.isRequired,
   mission: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   reserved: PropTypes.bool.isRequired,
