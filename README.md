@@ -65,11 +65,11 @@ After you're finished please remove all the comments and instructions.
 # 📖The SPACE TRAVELERS HUB<a name="about-project"></a>
 
 **The Space Travelers Hub** is a web application for a company that provides commercial and scientific space travel services. The application will allow users to book rockets and join selected space missions. The Space Travelers' Hub consists of Rockets, Missions, and the My Profile section. 
-<img src="https://dl.dropbox.com/scl/fi/f1mupcu44x1i8xc291yh7/rockets-spacetravelers.png">
+<img src="https://dl.dropboxusercontent.com/scl/fi/f1mupcu44x1i8xc291yh7/rockets-spacetravelers.png?rlkey=e308d88h8j4dmqe3jbw3v6sww&dl=1">
 The Rockets section displays a list of all available SpaceX rockets. Users can book each rocket by clicking the reservation button or cancel the previously made booking.
-<img src="https://dl.dropbox.com/scl/fi/25081mw5vm3hjzuibstgg/missions-spacetravelers.png"> 
+<img src="https://dl.dropboxusercontent.com/scl/fi/25081mw5vm3hjzuibstgg/missions-spacetravelers.png?rlkey=n43z8tp65xn8gyd6y62r4l8dr&dl=1">
 The Missions section displays a list of current missions along with their brief description and participation status. There is also a button next to each mission that allows users to join the selected mission or leave the mission the user joined earlier.
-<img src="https://dl.dropbox.com/scl/fi/on01wcxzv4a2aah4sc8rk/profile-spacetravelers.png">
+<img src="https://dl.dropboxusercontent.com/scl/fi/on01wcxzv4a2aah4sc8rk/profile-spacetravelers.png?rlkey=7n5avm32ximkyp7broreodsmk&dl=1">
 The My Profile section displays all reserved rockets and space missions.
 
 Head to the <a href="#live-demo">LIVE DEMO SECTION</a> for Live links and presentations
@@ -146,7 +146,7 @@ To get a local copy up and running, follow these steps.
 
 > Clone the repository
 ```
-git clone https://github.com/geekelo/recalc-webapp.git
+git clone https://github.com/geekelo/space-travelers-hub.git
 ```
 > And you are ready to begin your project
 
