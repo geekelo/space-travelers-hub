@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Rocket Component matches the snapshot 1`] = `
+<div>
+  <div
+    class="container"
+  >
+    <table
+      class="table table table-striped table-bordered table-hover"
+    >
+      <thead
+        class="thead"
+      >
+        <tr>
+          <td>
+            Mission
+          </td>
+          <td>
+            Description
+          </td>
+          <td>
+            Status
+          </td>
+          <td>
+             
+          </td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          class="missionList"
+        >
+          <td
+            class="mission_name"
+          />
+          <td>
+            Interesting
+          </td>
+          <td
+            class="membership_stat"
+          >
+            <button
+              class="active_member"
+              type="button"
+            >
+              Active member
+            </button>
+          </td>
+          <td
+            class="reservation_stat"
+          >
+            <button
+              class="leave_mission"
+              type="button"
+            >
+              Leave Mission
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;
