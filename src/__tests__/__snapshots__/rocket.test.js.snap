@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Rocket Component matches the snapshot 1`] = `
+<div>
+  <div>
+    <ul>
+      <li
+        class="cards"
+      >
+        <div>
+          <img
+            alt="Rocket"
+            src="image1.jpg"
+            width="200"
+          />
+        </div>
+        <div
+          class="contentSection"
+        >
+          <h2>
+            Falcon 1
+          </h2>
+          <p
+            class="description"
+          >
+            Description for Falcon 1
+          </p>
+          <p>
+            <button
+              type="submit"
+            >
+              Reserve Rocket
+            </button>
+          </p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+`;

@@ -1,0 +1,37 @@
+.profileContainer {
+  display: flex;
+  width: 80%;
+  margin: 4rem auto;
+  font-family: 'Montserrat', serif;
+}
+
+.listSections {
+  flex: 50%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.titles {
+  background-color: #007aff;
+  padding: 1.5rem 1rem;
+}
+
+.titleText {
+  color: #f8f8f8;
+}
+
+.lists {
+  list-style: none;
+  padding: 1rem;
+  background-color: #f8f8f8;
+}
+
+.itemsSection {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  font-weight: 600;
+  color: grey;
+}
