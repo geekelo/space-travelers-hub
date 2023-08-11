@@ -9,6 +9,7 @@ const initialState = {
   missions: {
     missions: [
       {
+        key: '1',
         missionId: '1',
         mission: 'Today rescue',
         description: 'Interesting',

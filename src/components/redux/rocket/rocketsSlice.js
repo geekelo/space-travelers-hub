@@ -15,7 +15,14 @@ export const fetchRockets = createAsyncThunk(
         throw new Error('Network response was not ok');
       }
       const data = await response.json();
-      return data;
+      const rocketsData = data.map((rocket) => ({
+        id: rocket.id,
+        name: rocket.name,
+        description: rocket.description,
+        flickr_images: rocket.flickr_images,
+        isReserved: false,
+      }));
+      return rocketsData;
     } catch (error) {
       throw new Error('Something went wrong with fetching data');
     }
@@ -31,7 +38,7 @@ const rocketReducer = createSlice({
         if (each.id === action.payload) {
           return {
             ...each,
-            active: true,
+            isReserved: true,
           };
         }
         return each;
@@ -46,7 +53,7 @@ const rocketReducer = createSlice({
         if (each.id === action.payload) {
           return {
             ...each,
-            active: false,
+            isReserved: false,
           };
         }
         return each;
