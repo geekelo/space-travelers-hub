@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-import Rocketitem from './rocketitem';
 import { fetchRockets } from '../redux/rocket/rocketsSlice';
+import Rocketitem from './rocketitem';
 
 function Rocket() {
   const rocketsData = useSelector((state) => state.rocket.value);
@@ -24,7 +24,7 @@ function Rocket() {
             summary={each.description}
             image1={each.flickr_images[0]}
             image2={each.flickr_images[1]}
-            active={each.active}
+            active={each.isReserved}
           />
         ))}
       </ul>
