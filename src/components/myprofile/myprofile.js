@@ -7,7 +7,7 @@ function Myprofile() {
   const rocketsData = useSelector((state) => state.rocket.value);
   const missionData = useSelector((state) => state.missions);
 
-  const activeArr = rocketsData.filter((each) => each.active === true);
+  const activeArr = rocketsData.filter((each) => each.isReserved === true);
   const reservedMissions = missionData.missions.filter(
     (mission) => mission.reserved === true,
   );
