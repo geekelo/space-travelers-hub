@@ -28,7 +28,7 @@ describe('Rocket Component', () => {
     const { container } = render(
       <Provider store={store}>
         <Rocket />
-      </Provider>
+      </Provider>,
     );
 
     // Take a snapshot of the rendered output

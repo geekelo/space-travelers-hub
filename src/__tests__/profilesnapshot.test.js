@@ -26,7 +26,7 @@ describe('Myprofile Component', () => {
     const { asFragment } = render(
       <Provider store={store}>
         <Myprofile />
-      </Provider>
+      </Provider>,
     );
 
     expect(asFragment()).toMatchSnapshot();

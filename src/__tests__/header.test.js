@@ -8,7 +8,7 @@ describe('Header Component', () => {
     const { asFragment } = render(
       <Router>
         <Header />
-      </Router>
+      </Router>,
     );
 
     expect(asFragment()).toMatchSnapshot();

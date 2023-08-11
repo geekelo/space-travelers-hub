@@ -26,7 +26,7 @@ describe('Myprofile Component', () => {
     render(
       <Provider store={store}>
         <Myprofile />
-      </Provider>
+      </Provider>,
     );
 
     const reservedMissionsText = screen.getByText('My Missions');
