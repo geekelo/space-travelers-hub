@@ -2,18 +2,17 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import configureMockStore from 'redux-mock-store';
-import Rocket from '../components/rocket/rocket';
+import Missions from '../components/missions'; 
 
 const mockStore = configureMockStore();
 const initialState = {
-  rocket: {
-    value: [
+  missions: {
+    missions: [
       {
-        id: 1,
-        name: 'Falcon 1',
-        description: 'Description for Falcon 1',
-        flickr_images: ['image1.jpg', 'image2.jpg'],
-        active: false,
+        missionId:'1',
+        mission:'Today rescue',
+        description: 'Interesting',
+        reserved: true,
       },
       // ... Add more rockets as needed for testing
     ],
@@ -27,7 +26,7 @@ describe('Rocket Component', () => {
   it('matches the snapshot', () => {
     const { container } = render(
       <Provider store={store}>
-        <Rocket />
+        <Missions />
       </Provider>
     );
 

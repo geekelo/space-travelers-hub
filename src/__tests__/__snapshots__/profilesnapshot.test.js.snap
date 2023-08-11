@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Myprofile Component renders reserved missions and active rockets 1`] = `
+<DocumentFragment>
+  <div
+    class="profileContainer"
+  >
+    <div
+      class="listSections"
+    >
+      <div
+        class="titles"
+      >
+        <h2
+          class="titleText"
+        >
+          My Missions
+        </h2>
+      </div>
+      <ul
+        class="itemsSection"
+      >
+        <li
+          class="lists"
+        >
+          <p />
+        </li>
+      </ul>
+    </div>
+    <div
+      class="listSections"
+    >
+      <div
+        class="titles"
+      >
+        <h2
+          class="titleText"
+        >
+          My Rockets
+        </h2>
+      </div>
+      <ul
+        class="itemsSection"
+      >
+        <li
+          class="lists"
+        >
+          <p>
+            Falcon 9
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</DocumentFragment>
+`;
